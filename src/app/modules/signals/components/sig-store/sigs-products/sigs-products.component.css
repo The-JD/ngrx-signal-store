@@ -1,0 +1,16 @@
+
+.product-list {
+    height: 20rem;
+    overflow-y: scroll;
+}
+
+.product-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc
+}
+
+button {
+    margin: 5px;
+  }
+  

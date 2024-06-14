@@ -1,0 +1,11 @@
+<h5>Cart Component</h5>
+
+<small> 
+<ul>
+    <li *ngFor="let item of cartStore.cartItems()">
+        {{ getProductName(item.productId) }} x {{ item.quantity }}
+    </li>
+</ul>
+</small>
+<h4> Total Price: Rs. {{ prodStore.totalPrice() }} </h4>
+<small>(Total Price is fetched from Product Store)</small>

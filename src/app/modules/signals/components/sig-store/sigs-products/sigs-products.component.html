@@ -1,0 +1,19 @@
+<h5>Products Component</h5>
+
+<div class="products">
+    <small> Items displayed: {{ productStore.products().length }}</small>
+    <div>
+        <input type="text" [(ngModel)]="filterValue" />
+        <button (click)="onFilter()">Filter</button>
+        <button (click)="clear()"> Clear </button>
+    </div>
+    <div class="product-list" infiniteScroll (scrolled)="onScroll()" [infiniteScrollDistance]="2"
+        [infiniteScrollThrottle]="500" [infiniteScrollContainer]="'.product-list'" [fromRoot]="true">
+        <div *ngFor="let product of productStore.products()" class="product-item">
+            <div> {{ product.name }} </div>
+            <div> Price: $ {{ product.price }} </div>
+            <small *ngIf="product.isAdded"> Added to cart</small>
+            <button *ngIf="!product.isAdded" (click)="addToCart(product.id)">Add to Cart</button>
+        </div>
+    </div>
+</div>
