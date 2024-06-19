@@ -23,5 +23,5 @@ export const SigsSharedStore = signalStore(
     { providedIn: 'root' },
     withDevtools('shared'),
     withState(initialSigsSharedState),
-    // withStorageSync('sigsSharedState')
+    withStorageSync('sigsSharedState')
 );

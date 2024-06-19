@@ -24,7 +24,7 @@ export const SigsCartStore = signalStore(
     { providedIn: 'root' },
     withDevtools('cart'),
     withState(initialSigsCartState),
-    // withStorageSync('sigsCartState'), // To enable local storage
+    withStorageSync('sigsCartState'), // To enable local storage
     withMethods(() => {
         const prodService = inject(SigsProductService);
         return {

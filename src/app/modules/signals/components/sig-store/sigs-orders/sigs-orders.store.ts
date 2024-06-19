@@ -18,7 +18,7 @@ export const SigsOrderStore = signalStore(
     { providedIn: 'root' },
     withDevtools('orders'),
     withState(initialSigsOrderState),
-    // withStorageSync('sigsOrderState'),
+    withStorageSync('sigsOrderState'),
     withHooks({
         onInit() {
             console.log('os init')

@@ -18,8 +18,8 @@ import { SigsSharedStore } from './modules/signals/components/sig-store/sigs-sha
 @NgModule({
   imports: [
     BrowserModule,
-    EffectsModule.forRoot([]),
-    StoreModule.forRoot(),
+    // EffectsModule.forRoot([]),
+    // StoreModule.forRoot(),
     SigsProductsComponent,
     SigsCartComponent,
     SigsOrdersComponent,
